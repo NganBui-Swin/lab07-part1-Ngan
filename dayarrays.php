@@ -9,10 +9,11 @@
   <h1>Ayo PHP</h1>
 <?php
     $days = array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-    for ($i =0; $i < 7; $i++) {
+   
+    for ($i =0; $i < 7 ; $i++) {
         echo "<p> $days[$i] </p>";
 }
- for ($i =0; $i < 7; $i++) {
+    for ($i =0; $i < 7 ; $i++) {
         echo "Day:", $i +1, $days[$i];
 }
     echo "<p>The days of the week in English are:<br>";

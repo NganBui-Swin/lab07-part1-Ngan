@@ -9,6 +9,7 @@
 <body>
   <h1>Rohirrim Tour Booking Confirmation</h1>
 <?php
+print_r($_POST);
   if (isset($_POST["firstname"])) {
 
     $firstname = $_POST["firstname"];
@@ -25,11 +26,14 @@
     elseif ($species == "H") $species = "Hobbit";
 
     $tour = "";
-    if (isset($_POST["accom"])) $tour = $tour . "Accommodation";
-    if (isset($_POST["4day"])) $tour = $tour . "Four-day tour";
-    if (isset($_POST["10day"])) $tour = $tour . "Ten-day tour";
+    if (isset($_POST["tour"])) {
+        for ($i =0; $i < count($_POST["tour"]); $i++) {
+            $tour = $tour . $_POST["tour"][$i] . " ";
+            }
+    }
 
     echo "<p>Welcome $firstname $lastname!<br>";
+    implode("and", )$tour
     echo "You are now booked on: $tour<br>";
     echo "Species: $species<br>";
     echo "Age: $age<br>";
