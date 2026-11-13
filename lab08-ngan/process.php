@@ -5,6 +5,7 @@
 
   if ($username == 'bobo' && $password == 'bobo123') {
     $_SESSION['user'] = $username;
+    $_SESSION['token'] =$_POST['token'];
     header('Location: welcome.php');
   } else {
     include 'header.inc';
